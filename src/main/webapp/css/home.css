@@ -1,0 +1,183 @@
+.header {
+    width: 100vw;  /* Chiếm toàn bộ chiều rộng màn hình */
+    height: 50px;  /* Điều chỉnh chiều cao theo ý muốn */
+    background: #ff6600;
+}
+/* Định dạng navbar */
+.navbar {
+    background-color: #FFA500 !important; /* Màu cam */
+    padding: 10px;
+}
+
+/* Logo shop */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Tìm kiếm */
+.form-control {
+    width: 300px; /* Giới hạn chiều rộng ô tìm kiếm */
+}
+
+/* Nút tìm kiếm */
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #FFA500;
+}
+
+/* Các nút bên phải */
+.navbar .btn {
+    font-weight: bold;
+}
+
+/* Nút Profile */
+.btn-light {
+    background-color: white;
+    color: black;
+}
+
+/* Nút Đăng Xuất */
+.btn-danger {
+    background-color: red;
+    color: white;
+}
+
+/* Nút Giỏ hàng */
+.btn-warning {
+    background-color: #FFCC00;
+    color: black;
+}
+
+/* Tăng khoảng cách giữa các nút */
+.navbar .btn {
+    margin-left: 10px;
+}
+
+/* Container chứa sản phẩm */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Căn từ trái sang phải */
+    align-items: stretch; /* Đảm bảo chiều cao đồng đều */
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Căn đều nội dung */
+    align-items: center;
+    text-align: center;
+    width: 200px; /* Hoặc kích thước tùy chỉnh */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.product-info {
+    flex-grow: 1; /* Giúp phần nội dung dãn đều */
+    min-height: 100px; /* Đặt chiều cao tối thiểu để căn đều */
+}
+
+.add-to-cart {
+    margin-top: auto; /* Đẩy nút xuống dưới */
+}
+.product-card {
+    position: relative;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Biến ô vuông thành có thể bấm được */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Bọc toàn bộ sản phẩm trong link */
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+@media (max-width: 1024px) {
+    .product-card {
+        flex: 1 1 calc(33.33% - 20px); /* 3 sản phẩm trên mỗi hàng khi màn hình nhỏ hơn */        
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px); /* 2 sản phẩm trên mỗi hàng khi màn hình nhỏ hơn */       
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 1 1 100%; /* 1 sản phẩm trên mỗi hàng khi màn hình quá nhỏ */      
+    }
+}
+/* Điều chỉnh kích thước modal */
+.modal-dialog {
+    max-width: 800px; /* Tăng chiều rộng modal */
+}
+
+/* Điều chỉnh nội dung bên trong modal */
+.modal-content {
+    padding: 20px;
+}
+
+/* Định dạng bảng giỏ hàng */
+.table {
+    width: 100%;
+    font-size: 16px; /* Tăng kích thước chữ */
+}
+
+/* Điều chỉnh ô nhập số lượng */
+.table input {
+    width: 60px;
+    text-align: center;
+}
+/* Căn chỉnh hàng chứa ô nhập số lượng và nút "Cập nhật" */
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa ô nhập số lượng và nút */
+}
+
+/* Điều chỉnh ô nhập số lượng */
+.cart-quantity input {
+    width: 60px;
+    text-align: center;
+}
+
+/* Điều chỉnh nút "Cập nhật" */
+.cart-quantity button {
+    white-space: nowrap; /* Tránh bị xuống dòng */
+}
+
+/* Ô nhập số lượng */
+.order-form input[type="number"] {
+    width: 70px;
+    text-align: center;
+    padding: 5px;
+    border: 10px orange #ccc;
+}
+/* Nút Thêm vào giỏ hàng */
+.cart-btn {
+    background-color: orange;
+    color: white;
+     margin-top: 10px
+}
+
